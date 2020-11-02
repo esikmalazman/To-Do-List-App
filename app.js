@@ -1,42 +1,45 @@
 //1.get element and store in variable
 var addButton=document.getElementsByName("add")[0];
-var deleteButton = document.getElementsByName("delete")[0];
-
-
+var clearButton = document.getElementsByName("clear")[0];
 
 //2. add event listener
-addButton.addEventListener("click",addList);
-deleteButton.addEventListener("click",deleteList);
 
-//3. create function to add,delete to-do-list
+addButton.addEventListener("click",addList);
+clearButton.addEventListener("click",clearList);
+
+//3. create function to add,cross to-do-list
 
 
 //6. varible target location
 var target = document.getElementById("taskList");
 //5. get value form text and add to list 
+
+var getText,newListTag,Task;
 function addList()
 {
     //get elements from texbox
-    var getText = document.getElementById("toDoList");
+     getText = document.getElementById("toDoList");
     //4. create variblae to add new element
-    var newListTag = document.createElement("li");
-    //5.variable add text
-    var Task = document.createTextNode(getText.value);
-    // append textNode to <li>  node
-    newListTag.appendChild(Task);
-
-    //newListTag ready to append to target location
+     newListTag = document.createElement("li");
+    newListTag.style.cssText = "list-style-type:none;";
+    newListTag.innerHTML += '<input type="checkbox" name="completedTask" onclick="myList(this)">';
+    //insert xtext element inside <li> , get value form getText
+    newListTag.appendChild(document.createTextNode(getText.value));
+    // insert <li> into div
     target.appendChild(newListTag);
-
-    
-    document.body.insertBefore(newListTag,target);
     console.log("Add button click");
     
 }
-
-function deleteList()
+function clearList()
 {
-    console.log("Delete button click");
+    target.remove();
+    location.reload();//window reload after clicked
+    console.log("remove all elements");   
 }
 
+var checkList = target.querySelectorAll("input[type = 'checkbox']");
 
+function myList(checkboxElem){
+    checkboxElem.parentElement.style.textDecoration = "line-through";
+    
+  }
