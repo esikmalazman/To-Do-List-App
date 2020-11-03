@@ -42,5 +42,6 @@ var checkList = target.querySelectorAll("input[type = 'checkbox']");
 //this return inside the element to this function
 function myList(checkboxElem){
     checkboxElem.parentElement.style.textDecoration = "line-through";
+
     
   }

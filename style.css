@@ -12,7 +12,7 @@ body
 {
     width: 100%;
     text-align: center;
-    
+    margin-left: 2.3rem;
 }
 
 .wrapper h1
@@ -20,10 +20,12 @@ body
     margin-top: 2rem;
     font-size: 3.5rem;
     color: #14274e;
+    
 }
 .wrapper .image-icon
 {
     width: 20%;
+    
     
 }
 .wrapper p 
@@ -37,23 +39,22 @@ body
 {
     width: 80%;
     height: 2rem;
-    margin-top: 0.5rem;
-    margin-left: 2rem;
-    margin-right: 6rem;
-    margin-bottom: 1.5rem;
+    margin: 0.5rem 2rem 6rem 1.5rem;
+    
 }
 
 .wrapper #taskList
 {
     width: 100%;
     display: inline-block;
-    font-size: 1.5rem;
-    line-height: 1.5;    
+    font-size: 1.5;
+    line-height: 1.2;    
 }
 .wrapper input[type=checkbox]
 {
-  transform: scale(2);
+  transform: scale(1.5rem);
   margin-right: 1rem;
+  border-radius: 0;
 }
 .wrapper button
 {
@@ -70,7 +71,17 @@ body
     border: 1px #3079ED solid;
     box-shadow: inset 0 1px 0 #80B0FB;
 }
-
+.wrapper #clearBtn 
+{
+    color: #444444;
+    background: #F3F3F3;
+    border: 1px #DADADA solid;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 9pt;
+    outline: none;
+}
 .wrapper .author 
 {
     margin-top: 19rem;
@@ -85,4 +96,84 @@ body
 {
     margin-top: 0.5rem;
     font-size: 0.5rem;
+}
+
+@media only screen and (min-width:768px)
+{
+   
+.wrapper h1
+{
+    font-size: 4.5rem;
+    margin-top: 7rem;
+}
+.wrapper .image-icon
+{
+    width: 15%;
+    margin-top: 0.5rem;
+    margin-bottom:0.5rem ;
+    
+    
+}
+.wrapper p 
+{
+    font-size: 2.5rem;
+   
+}
+
+.wrapper #taskList
+{
+    
+    font-size: 2rem;
+       
+}
+.wrapper #toDoList
+{
+   margin-top: 1rem;
+   margin-left: 1rem;
+    height: 3rem;
+   
+}
+.wrapper #addBtn,#clearBtn
+{
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 6rem;
+}
+
+.wrapper .author 
+{
+    text-align: center;
+    
+}
+
+}
+@media only screen and (min-width : 1000px)
+{ 
+    
+.wrapper h1
+ {
+        
+        margin-top: 1rem;
+        margin-right: 3.5rem;
+}  
+    
+.wrapper input[type=checkbox]
+{
+  transform: scale(2);
+  margin-right: 1rem;
+  
+}
+.wrapper .author
+{
+    margin-top: 8.5rem;
+}
+.wrapper h5
+{
+    font-size: 1rem;
+} 
+.wrapper .credits 
+{
+   
+    font-size: 1rem;
+}
 }
