@@ -22,7 +22,7 @@ function addList()
     //4. create variblae to add new element
      newListTag = document.createElement("li");
     newListTag.style.cssText = "list-style-type:none;";
-    newListTag.innerHTML += '<input type="checkbox" name="completedTask" onclick="myList(this)">';
+    newListTag.innerHTML += '<input class="check-btn" type="checkbox" name="completedTask" onclick="myList(this)">';
     //insert xtext element inside <li> , get value form getText
     newListTag.appendChild(document.createTextNode(getText.value));
     // insert <li> into div
@@ -39,6 +39,7 @@ function clearList()
 
 var checkList = target.querySelectorAll("input[type = 'checkbox']");
 
+//this return inside the element to this function
 function myList(checkboxElem){
     checkboxElem.parentElement.style.textDecoration = "line-through";
     

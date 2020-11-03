@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>To-Do-List-App</title>
 </head>
 <body>
-    <h1> To-Do-List</h1>
-
+   <section class="wrapper">
+    <h1> todos</h1>
+    <img class="image-icon"src="images/test.svg">
+    <p>What need to be done? </p>
     <div id ="taskList" name="taskListName"></div>
     <div id="place">
         <input type="text" id="toDoList">
-        <button name="add">Add</button>
+        <button id="addBtn"name="add">Add</button>
         <button id="clearBtn"name="clear">Clear</button>
     </div>
+   </section>
+    
     <script src="app.js"></script>
 </body>
 </html>
-<input type="checkbox"
