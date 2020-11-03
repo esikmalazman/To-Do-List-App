@@ -1,4 +1,4 @@
-# to-do-lis-web-application
+# to-do-list-web-app
 create a to-do-list web app from vanilla javascript 
 
 # What I learn from this project
